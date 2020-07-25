@@ -15,17 +15,36 @@ var castCrew = [
     'James Cromwell',
     'Alice Kridge'];
 
+var fontSize;
+var previousCrewMember;
+var index;
+const initialFontSize = 230;
+var member;
 function setup() {
-    createCanvas(windowWidth - 50, windowHeight - 50);
+    createCanvas(windowWidth, windowHeight);
+    //noCanvas();
     background(0);
+    index = 0;
+    fontSize = initialFontSize;
+    previousCrewMember = castCrew[index];
 }
+
 
 function draw() {
     background(0);
-    textSize(60);
-    textAlign(CENTER);
+    textSize(fontSize);
     fill(255);
-    let index = +(frameCount < 100 ? 0 : ("" + frameCount).charAt(("" + frameCount).length - 3));
+    textAlign(CENTER);
+    index = (fontSize < 35) ? index + 1 : index;
+    if (index === castCrew.length) {
+        index = 0;
+    }
     let crewMember = castCrew[index];
+    if (crewMember !== previousCrewMember) {
+        fontSize = initialFontSize;
+        previousCrewMember = crewMember;
+    } else {
+        fontSize -= 0.5;
+    }
     text(crewMember, width / 2, height / 2);
 }
