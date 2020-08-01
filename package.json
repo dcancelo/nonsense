@@ -1,0 +1,23 @@
+{
+  "name": "nonsense",
+  "version": "1.0.0",
+  "description": "[![Hits-of-Code](https://hitsofcode.com/github/dcancelo/nonsense)](https://hitsofcode.com/view/github/dcancelo/nonsense)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcancelo/nonsense.git"
+  },
+  "author": "dcancelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcancelo/nonsense/issues"
+  },
+  "homepage": "https://github.com/dcancelo/nonsense#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}

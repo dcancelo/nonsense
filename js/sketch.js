@@ -3,7 +3,8 @@
  * Crew cast's Star Trek: First Contact (1996)
  * 
  */
-var castCrew = [
+var lines = [
+    'Star Trek: First Contact',
     'Patrick Stewart',
     'Jonathan Frakes',
     'Brent Spiner',
@@ -26,7 +27,7 @@ function setup() {
     background(0);
     index = 0;
     fontSize = initialFontSize;
-    previousCrewMember = castCrew[index];
+    previousCrewMember = lines[index];
 }
 
 
@@ -36,10 +37,10 @@ function draw() {
     fill(255);
     textAlign(CENTER);
     index = (fontSize < 35) ? index + 1 : index;
-    if (index === castCrew.length) {
+    if (index === lines.length) {
         index = 0;
     }
-    let crewMember = castCrew[index];
+    let crewMember = lines[index];
     if (crewMember !== previousCrewMember) {
         fontSize = initialFontSize;
         previousCrewMember = crewMember;
